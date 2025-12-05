@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="author-date" version="1.0">
   <info>
-    <title>Advances in Concrete Construction</title>
-    <id>advances-concrete-construction</id>
+    <title>Concrete Construction Author-Date</title>
+    <id>http://www.zotero.org/styles/concrete-construction-author-date</id>
+    <link href="http://www.zotero.org/styles/concrete-construction-author-date" rel="self"/>
     <author>
-      <name>Custom Style</name>
+      <name>Custom</name>
     </author>
     <category citation-format="author-date"/>
     <updated>2024-01-01</updated>
   </info>
   
-  <!-- IN-TEXT: (Cheng, 2011) or (Cheng and Xu, 2013) -->
   <citation>
-    <layout prefix="(" suffix=")">
+    <layout delimiter=",">
       <names variable="author">
-        <name and="text" delimiter=", "/>
+        <name and="text"/>
       </names>
-      <date variable="issued" prefix=", ">
+      <date variable="issued">
         <date-part name="year"/>
       </date>
     </layout>
   </citation>
   
-  <!-- REFERENCE LIST -->
   <bibliography>
     <layout>
       <names variable="author">
-        <name and="text" delimiter=", "/>
+        <name and="text"/>
       </names>
       <date variable="issued" prefix=" (" suffix="), &quot;">
         <date-part name="year"/>
