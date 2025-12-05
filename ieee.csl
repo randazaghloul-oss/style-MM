@@ -1,59 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0.1" default-locale="en-US">
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
   <info>
-    <title>Advances in Concrete Construction Style</title>
-    <id>http://www.zotero.org/styles/advances-in-concrete-construction</id>
-    <link href="http://www.zotero.org/styles/advances-in-concrete-construction" rel="self"/>
+    <title>Advances in Concrete Construction</title>
+    <id>advances-concrete-construction</id>
     <author>
-      <name>Advances in Concrete Construction</name>
+      <name>Custom Style</name>
     </author>
     <category citation-format="author-date"/>
-    <category field="engineering"/>
     <updated>2024-01-01</updated>
   </info>
   
-  <locale xml:lang="en">
-    <terms>
-      <term name="and">and</term>
-      <term name="page">p.</term>
-      <term name="pages">pp.</term>
-    </terms>
-  </locale>
-  
-  <macro name="author">
-    <names variable="author">
-      <name name-as-sort-order="all" sort-separator=", " and="text" delimiter-precedes-last="always"/>
-      <substitute>
-        <names variable="editor"/>
-        <names variable="translator"/>
-      </substitute>
-    </names>
-  </macro>
-  
-  <macro name="year">
-    <date variable="issued">
-      <date-part name="year"/>
-    </date>
-  </macro>
-  
-  <citation et-al-min="3" et-al-use-first="1">
-    <layout>
-      <text macro="author"/>
-      <text macro="year" prefix=" (" suffix=")"/>
+  <!-- IN-TEXT: (Cheng, 2011) or (Cheng and Xu, 2013) -->
+  <citation>
+    <layout prefix="(" suffix=")">
+      <names variable="author">
+        <name and="text" delimiter=", "/>
+      </names>
+      <date variable="issued" prefix=", ">
+        <date-part name="year"/>
+      </date>
     </layout>
   </citation>
   
-  <bibliography hanging-indent="false" entry-spacing="0" line-spacing="2">
+  <!-- REFERENCE LIST -->
+  <bibliography>
     <layout>
-      <!-- Format: Author(s) (Year), "Title", Journal, Volume(Issue), pages. DOI -->
-      <text macro="author"/>
-      <text macro="year" prefix=" (" suffix="), &quot;"/>
-      <text variable="title" suffix="&quot;, " quotes="true"/>
+      <names variable="author">
+        <name and="text" delimiter=", "/>
+      </names>
+      <date variable="issued" prefix=" (" suffix="), &quot;">
+        <date-part name="year"/>
+      </date>
+      <text variable="title" suffix="&quot;, "/>
       <text variable="container-title" font-style="italic" suffix=", "/>
-      <group delimiter="">
-        <text variable="volume" font-weight="bold"/>
-        <text variable="issue" prefix="(" suffix="), "/>
-      </group>
+      <text variable="volume" font-weight="bold"/>
+      <text variable="issue" prefix="(" suffix="), "/>
       <text variable="page" suffix=". "/>
       <text variable="DOI" prefix="https://doi.org/"/>
     </layout>
